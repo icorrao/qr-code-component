@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--Light-gray);
+}
+
+.qr-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 1rem;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--White);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.qr-container img {
+  border-radius: 10px;
+  width: 290px;
+  height: 290px;
+}
+
+.qr-container span {
+  width: 250px;
+  text-align: center;
+}
+
+.qr-container .span-1 {
+  color: var(--Dark-blue);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 1.8rem 0;
+}
+
+.qr-container .span-2 {
+  font-weight: 400;
+  color: var(--Grayish-blue);
+  margin-bottom: 1rem;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 0.8rem;
+  margin: 0.5rem;
+  transform: translateX(-50%);
+}
+
+.attribution a {
+  color: var(--Grayish-blue);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: var(--Dark-blue);
+}
+
+@media (max-width: 375px) {
+  .qr-container {
+    width: 99%;
+  }
+
+  .qr-container img {
+    width: 99%;
+    height: auto;
+  }
+
+  .qr-container span {
+    font-size: 1.5rem;
+    width: 90%;
+  }
+
+  .qr-container .span-2 {
+    font-size: 1.2rem;
+  }
+
+  .attribution {
+    width: max-content;
+  }
+}
